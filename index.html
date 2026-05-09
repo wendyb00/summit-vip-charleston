@@ -1,0 +1,717 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>In-Person VIP · Manifesting Summit · Mindvalley</title>
+
+<!-- Mindvalley production CSS bundles (drop-in compatibility with Storyblok) -->
+<link rel="stylesheet" href="https://storyblok-assets.mindvalley.com/css/app.fd2af09a9226decfcf9f.css" />
+<link rel="stylesheet" href="https://storyblok-assets.mindvalley.com/css/components/breadcrumb-step.5fd5c70f6c68d2257c13.css" />
+<link rel="stylesheet" href="https://storyblok-assets.mindvalley.com/css/components/breadcrumbs.883bd005baed9e28f690.css" />
+<link rel="stylesheet" href="https://storyblok-assets.mindvalley.com/css/components/checkout-link.176e4b62b4bd3f12635c.css" />
+<link rel="stylesheet" href="https://storyblok-assets.mindvalley.com/css/components/column.db788697540def684be8.css" />
+<link rel="stylesheet" href="https://storyblok-assets.mindvalley.com/css/components/credit-card-disclaimer.041dfc0044ee55cf805d.css" />
+<link rel="stylesheet" href="https://storyblok-assets.mindvalley.com/css/components/icon.c36e18ffca15f22d9a82.css" />
+<link rel="stylesheet" href="https://storyblok-assets.mindvalley.com/css/components/intersected.12593362209a96da0e01.css" />
+<link rel="stylesheet" href="https://storyblok-assets.mindvalley.com/css/components/mindvalley-header.1dc971b372effcbd24e7.css" />
+<link rel="stylesheet" href="https://storyblok-assets.mindvalley.com/css/components/page.ee00c1b09272a1f2805f.css" />
+<link rel="stylesheet" href="https://storyblok-assets.mindvalley.com/css/components/stripe-checkout-link.1ec46f9d78f338ab932c.css" />
+<link rel="stylesheet" href="https://storyblok-assets.mindvalley.com/css/components/badge-non-semantic.01ffd43e377daab4c9ac.css" />
+<link rel="stylesheet" href="https://storyblok-assets.mindvalley.com/css/components/badge-semantic.3951ca9780a48de63912.css" />
+
+<style>
+:root{
+  --mv-brand:#7a12d4; --mv-brand-bright:#9b37f2; --mv-brand-dark:#4f0c8a; --mv-brand-light:#f8efff;
+  --mv-pink:#df1a6f; --mv-orange:#ed6325; --mv-orange-bright:#ff931f;
+  --mv-yellow:#f5c918; --mv-green:#18c176;
+  --mv-text:#0f131a; --mv-text-muted:#595e67;
+  --mv-grey-100:#f9f9f9; --mv-grey-150:#f3f4f6; --mv-grey-250:#dfe1e5;
+  --gold:#d4a017;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mv-text);line-height:1.55;background:#fff}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--mv-brand);text-decoration:none}
+.container{max-width:1080px;margin:0 auto;padding:0 24px}
+.container-narrow{max-width:820px;margin:0 auto;padding:0 24px}
+
+/* === Top chrome === */
+.vip-topbar{border-bottom:1px solid var(--mv-grey-250);background:#fff;position:sticky;top:0;z-index:50}
+.vip-topbar-inner{max-width:1280px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.vip-topbar-logo{font-weight:800;font-size:18px;letter-spacing:-0.01em;color:var(--mv-text)}
+.vip-topbar-meta{display:flex;gap:22px;font-size:14px;color:var(--mv-text-muted)}
+.vip-topbar-meta a{color:var(--mv-text-muted)}
+.progress-bar{display:flex;gap:8px;align-items:center;font-size:12px;color:var(--mv-text-muted);font-weight:600;letter-spacing:0.04em;text-transform:uppercase}
+.progress-step{display:flex;align-items:center;gap:6px}
+.progress-step .dot{width:18px;height:18px;border-radius:50%;background:var(--mv-grey-250);display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:700}
+.progress-step.done .dot{background:var(--mv-green)}
+.progress-step.current .dot{background:var(--mv-brand)}
+.progress-step.current{color:var(--mv-text)}
+.progress-line{flex:1;height:2px;background:var(--mv-grey-250);min-width:18px;max-width:36px}
+
+/* === Countdown bar === */
+.countdown-bar{background:var(--mv-text);color:#fff;padding:12px 24px;text-align:center;font-size:14px;font-weight:500;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap}
+.countdown-bar strong{font-weight:700}
+.countdown-units{display:inline-flex;gap:4px;font-weight:700}
+.countdown-unit{background:rgba(255,255,255,0.12);padding:4px 8px;border-radius:5px;min-width:38px;text-align:center;font-size:14px}
+.countdown-unit-label{font-size:9px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;opacity:0.7;display:block;line-height:1;margin-top:1px}
+
+/* === CTAs === */
+.vip-cta{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(180deg,#ff8a1f 0%,#ff7800 100%);color:#fff!important;font-weight:700;font-size:17px;padding:18px 38px;border-radius:999px;text-decoration:none!important;box-shadow:0 8px 22px rgba(255,120,0,0.32),inset 0 1px 0 rgba(255,255,255,0.25);transition:transform .12s,box-shadow .12s;border:none;cursor:pointer;line-height:1}
+.vip-cta:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(255,120,0,0.42),inset 0 1px 0 rgba(255,255,255,0.25)}
+.vip-cta-block{display:block;width:100%;text-align:center}
+.vip-cta-mega{font-size:18px;padding:20px 46px}
+
+/* === Section spacing === */
+section{padding:72px 0}
+section.tight{padding:48px 0}
+.eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--mv-brand);margin-bottom:14px}
+h1,h2,h3{margin:0 0 18px;line-height:1.18;letter-spacing:-0.02em}
+h1{font-size:clamp(32px,4.4vw,52px);font-weight:800}
+h2{font-size:clamp(26px,3.4vw,40px);font-weight:800}
+h3{font-size:clamp(20px,2.4vw,26px);font-weight:700}
+p.lede{font-size:19px;color:var(--mv-text-muted);max-width:680px}
+
+/* === Hero === */
+.hero{background:linear-gradient(180deg,#0a0e2c 0%,#1a1054 60%,#3a1c8a 100%);color:#fff;padding:64px 0 0;overflow:hidden}
+.hero h1{color:#fff}
+.hero h1 .accent{color:var(--mv-yellow)}
+.hero .eyebrow{color:var(--mv-yellow);margin-bottom:18px}
+.hero-grid{display:flex;flex-direction:column;gap:40px;align-items:center;text-align:center}
+.hero-grid > div:first-child{max-width:820px;margin:0 auto}
+.hero-anchor,.hero-kicker{margin-left:auto;margin-right:auto}
+.hero-meta{justify-content:center}
+.hero-cta-row{justify-content:center}
+.hero-img{width:100%;max-width:880px;margin:0 auto}
+.hero-anchor{font-size:17px;line-height:1.55;color:rgba(255,255,255,0.85);margin:18px 0 14px;max-width:640px}
+.hero-anchor strong{color:var(--mv-yellow);font-weight:700}
+.hero-kicker{font-size:20px;line-height:1.45;color:#fff;font-weight:600;margin:0 0 24px;max-width:640px}
+.hero-kicker .hero-price{color:var(--mv-yellow);font-weight:800}
+.hero-meta{font-size:15px;color:rgba(255,255,255,0.78);margin:14px 0 28px;display:flex;gap:18px;flex-wrap:wrap}
+.hero-meta span{display:inline-flex;align-items:center;gap:6px}
+.hero-cta-row{display:inline-flex;flex-direction:column;align-items:center;gap:12px;margin-top:8px}
+.hero-cta-note{font-size:14px;color:rgba(255,255,255,0.7)}
+.hero-img{border-radius:14px;overflow:hidden;box-shadow:0 18px 60px rgba(0,0,0,0.4)}
+.hero-bottom{margin-top:48px;background:rgba(0,0,0,0.25);padding:18px 0;text-align:center;font-size:14px;color:rgba(255,255,255,0.78)}
+.hero-bottom strong{color:var(--mv-yellow);font-weight:700}
+
+/* === Comparison table === */
+.compare-wrap{overflow-x:auto}
+.compare{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border:1px solid var(--mv-grey-250);border-radius:14px;overflow:hidden;font-size:15px}
+.compare thead th{padding:24px 18px;text-align:center;font-weight:700;font-size:14px;letter-spacing:0.04em;text-transform:uppercase;color:var(--mv-text-muted);border-bottom:1px solid var(--mv-grey-250);background:var(--mv-grey-100)}
+.compare thead th .price{display:block;font-size:24px;color:var(--mv-text);text-transform:none;letter-spacing:-0.02em;margin-top:4px}
+.compare thead th .tier{display:block;font-size:12px;color:var(--mv-text-muted);text-transform:none;letter-spacing:0;margin-top:2px;font-weight:500}
+.compare thead th.featured{background:linear-gradient(180deg,#7a12d4 0%,#4f0c8a 100%);color:#fff}
+.compare thead th.featured .price{color:var(--mv-yellow)}
+.compare thead th.featured .tier{color:rgba(255,255,255,0.85)}
+.compare thead th.featured .badge{display:inline-block;background:var(--mv-yellow);color:var(--mv-text);padding:3px 10px;border-radius:999px;font-size:10px;font-weight:800;letter-spacing:0.08em;margin-bottom:8px}
+.compare tbody td{padding:18px;border-bottom:1px solid var(--mv-grey-150);text-align:center;color:var(--mv-text-muted)}
+.compare tbody td:first-child{text-align:left;font-weight:600;color:var(--mv-text)}
+.compare tbody td.yes{color:var(--mv-green);font-weight:700}
+.compare tbody td.no{color:var(--mv-grey-250)}
+.compare tbody td.featured{background:rgba(122,18,212,0.04)}
+.compare tbody tr:last-child td{border-bottom:none}
+.compare-cta{padding:24px 18px;text-align:center;background:rgba(122,18,212,0.04)}
+
+/* === Reframe === */
+.reframe{background:var(--mv-grey-100)}
+.reframe-text{margin:0;padding:0;border:none;font-size:clamp(22px,2.6vw,30px);line-height:1.45;font-weight:600;color:var(--mv-text);max-width:760px}
+.reframe-text .em{color:var(--mv-brand);font-weight:700}
+.reframe-attribution{margin-top:24px;font-size:14px;color:var(--mv-text-muted);font-weight:500}
+
+/* === Teachers section === */
+.teachers{background:#fff}
+.teachers-anchor{background:linear-gradient(135deg,#fff8e6 0%,#fff 100%);border:1px solid #f5e3a8;border-radius:14px;padding:32px;margin-bottom:48px;display:grid;grid-template-columns:1fr;gap:18px;align-items:center}
+@media(min-width:760px){.teachers-anchor{grid-template-columns:auto 1fr;gap:28px}}
+.teachers-anchor-num{font-size:64px;font-weight:900;line-height:1;color:var(--gold);letter-spacing:-0.04em}
+.teachers-anchor-num .small{font-size:32px;font-weight:700;vertical-align:top}
+.teachers-anchor p{margin:0;color:var(--mv-text);font-size:17px}
+.teachers-anchor strong{color:var(--mv-text)}
+.teacher-grid{display:grid;grid-template-columns:1fr;gap:18px}
+@media(min-width:680px){.teacher-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.teacher-grid{grid-template-columns:repeat(3,1fr)}}
+.teacher{border:1px solid var(--mv-grey-250);border-radius:14px;padding:24px;background:#fff;display:flex;flex-direction:column;gap:12px;transition:box-shadow .15s,transform .15s}
+.teacher:hover{box-shadow:0 12px 28px rgba(0,0,0,0.06);transform:translateY(-2px)}
+.teacher-head{display:flex;gap:14px;align-items:center}
+.teacher-photo{width:72px;height:72px;border-radius:50%;object-fit:cover;background:var(--mv-grey-150)}
+.teacher-name{font-weight:800;font-size:18px;line-height:1.2}
+.teacher-title{font-size:13px;color:var(--mv-text-muted);margin-top:2px}
+.teacher-status{display:inline-block;font-size:11px;font-weight:700;color:var(--mv-brand);background:var(--mv-brand-light);padding:3px 8px;border-radius:999px;letter-spacing:0.04em;text-transform:uppercase;margin-top:6px}
+.teacher-body{font-size:14px;color:var(--mv-text);line-height:1.5}
+.teacher-body strong{color:var(--mv-text)}
+.teacher-anchor{margin-top:auto;padding-top:12px;border-top:1px dashed var(--mv-grey-250);font-size:13px;color:var(--mv-text-muted)}
+.teacher-anchor strong{color:var(--mv-text)}
+
+/* === Inclusions === */
+.inclusions{background:var(--mv-grey-100)}
+.inclusion-grid{display:grid;grid-template-columns:1fr;gap:18px}
+@media(min-width:680px){.inclusion-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.inclusion-grid{grid-template-columns:repeat(3,1fr)}}
+.inclusion{background:#fff;border:1px solid var(--mv-grey-250);border-radius:12px;padding:24px;position:relative}
+.inclusion-num{position:absolute;top:-14px;left:24px;background:var(--mv-brand);color:#fff;width:32px;height:32px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:14px}
+.inclusion h3{font-size:17px;margin:8px 0 8px}
+.inclusion p{margin:0;font-size:14px;color:var(--mv-text-muted);line-height:1.5}
+
+/* === Social proof === */
+.proof{background:#fff}
+.proof-grid{display:grid;grid-template-columns:1fr;gap:20px}
+@media(min-width:760px){.proof-grid{grid-template-columns:repeat(3,1fr)}}
+.proof-card{background:#fff;border:1px solid var(--mv-grey-250);border-radius:14px;padding:24px;display:flex;gap:18px;align-items:flex-start}
+.proof-photo{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,var(--mv-brand-bright),var(--mv-brand));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:22px;flex-shrink:0}
+.proof-quote{font-size:15px;color:var(--mv-text);line-height:1.5;margin:0 0 10px}
+.proof-name{font-weight:700;font-size:14px}
+.proof-meta{font-size:12px;color:var(--mv-text-muted)}
+
+/* === Logistics card === */
+.logistics{background:linear-gradient(135deg,#f8efff 0%,#fff 100%)}
+.logistics-card{background:#fff;border:1px solid var(--mv-grey-250);border-radius:14px;padding:36px;display:grid;grid-template-columns:1fr;gap:24px;box-shadow:0 8px 28px rgba(122,18,212,0.06)}
+@media(min-width:760px){.logistics-card{grid-template-columns:repeat(2,1fr)}}
+.logistics-row{display:flex;flex-direction:column;gap:6px}
+.logistics-row .label{font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--mv-brand)}
+.logistics-row .value{font-size:16px;font-weight:600;color:var(--mv-text)}
+.logistics-row .sub{font-size:14px;color:var(--mv-text-muted)}
+.logistics-note{grid-column:1/-1;border-top:1px solid var(--mv-grey-150);padding-top:18px;font-size:13px;color:var(--mv-text-muted);font-style:italic}
+
+/* === Value frame === */
+.value-frame{background:var(--mv-text);color:#fff}
+.value-frame h2{color:#fff}
+.value-list{list-style:none;padding:0;margin:32px 0;display:grid;grid-template-columns:1fr;gap:14px}
+@media(min-width:680px){.value-list{grid-template-columns:repeat(2,1fr)}}
+.value-list li{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:18px 20px;display:flex;justify-content:space-between;align-items:baseline;gap:14px}
+.value-list .who{font-weight:600;font-size:15px}
+.value-list .amount{font-weight:800;font-size:18px;color:var(--mv-yellow);white-space:nowrap}
+.value-total{margin-top:32px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.18);text-align:center}
+.value-total .strike{color:rgba(255,255,255,0.5);text-decoration:line-through;font-size:18px;font-weight:600}
+.value-total .now{display:block;font-size:48px;font-weight:900;letter-spacing:-0.02em;color:var(--mv-yellow);margin:8px 0}
+.value-total p{color:rgba(255,255,255,0.78);font-size:15px;margin:0}
+
+/* === Order menu (final CTA) === */
+.order{background:linear-gradient(135deg,#cfe9ec 0%,#e6f0d6 100%);padding:80px 0}
+.order-card{background:#fff;border-radius:18px;padding:40px;display:grid;grid-template-columns:1fr;gap:32px;box-shadow:0 24px 60px rgba(0,0,0,0.08)}
+@media(min-width:840px){.order-card{grid-template-columns:1.1fr 1fr;align-items:center;padding:48px}}
+.order-left h2{font-size:clamp(24px,2.8vw,32px);margin-bottom:24px}
+.order-features{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px}
+.order-features li{display:flex;gap:12px;align-items:flex-start;font-size:15px;line-height:1.5}
+.order-features li::before{content:"";width:22px;height:22px;border-radius:50%;background:var(--mv-brand);color:#fff;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='5 12 10 17 19 8'/></svg>");background-size:14px;background-repeat:no-repeat;background-position:center;margin-top:1px}
+.order-right{display:flex;flex-direction:column;gap:18px}
+.order-price-card{border-radius:14px;overflow:hidden;border:1px solid var(--mv-grey-250)}
+.order-price-head{background:linear-gradient(180deg,#7a12d4 0%,#4f0c8a 100%);color:#fff;padding:10px 16px;text-align:center;font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase}
+.order-price-body{background:#fff;padding:24px 20px;text-align:center}
+.order-price-body .price-row{display:flex;align-items:baseline;justify-content:center;gap:10px;margin-bottom:10px}
+.order-price-body .strike{font-size:22px;color:var(--mv-text-muted);text-decoration:line-through;font-weight:600}
+.order-price-body .now{font-size:48px;font-weight:900;letter-spacing:-0.02em;color:var(--mv-text)}
+.order-price-body .note{font-size:13px;color:var(--mv-text-muted);margin:0}
+.order-payments{display:flex;justify-content:center;gap:8px;align-items:center;margin-top:14px}
+.order-payments img{height:18px;width:auto;opacity:0.85}
+.order-vat{font-size:12px;color:var(--mv-text-muted);text-align:center;margin-top:10px;line-height:1.4}
+.order-skip{display:block;text-align:center;margin-top:24px}
+.order-skip a{display:inline-block;border:1.5px solid var(--mv-brand);color:var(--mv-brand);padding:12px 28px;border-radius:999px;font-weight:600;font-size:14px}
+
+/* === Footer === */
+.footer{background:#fff;border-top:1px solid var(--mv-grey-250);padding:32px 0;font-size:13px;color:var(--mv-text-muted);text-align:center}
+.footer a{color:var(--mv-text-muted);margin:0 10px}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+1. TOPBAR  +  COUNTDOWN
+============================================================ -->
+<header class="vip-topbar">
+  <div class="vip-topbar-inner">
+    <div class="vip-topbar-logo">Mindvalley</div>
+
+    <nav class="progress-bar" aria-label="Checkout progress">
+      <span class="progress-step done"><span class="dot">✓</span> Free Ticket</span>
+      <span class="progress-line"></span>
+      <span class="progress-step done"><span class="dot">✓</span> VIP Access</span>
+      <span class="progress-line"></span>
+      <span class="progress-step current"><span class="dot">3</span> In-Person Upgrade</span>
+    </nav>
+
+    <div class="vip-topbar-meta">
+      <a href="mailto:support@mindvalley.com">Support</a>
+      <a href="https://www.mindvalley.com/login">Login</a>
+    </div>
+  </div>
+</header>
+
+<div class="countdown-bar" role="status" aria-live="polite">
+  <span>This in-person upgrade is only available on this page.</span>
+  <strong>Closing in</strong>
+  <span class="countdown-units" id="countdown">
+    <span class="countdown-unit">00<span class="countdown-unit-label">D</span></span>
+    <span class="countdown-unit">00<span class="countdown-unit-label">H</span></span>
+    <span class="countdown-unit">15<span class="countdown-unit-label">M</span></span>
+    <span class="countdown-unit">00<span class="countdown-unit-label">S</span></span>
+  </span>
+</div>
+
+<!-- ============================================================
+2. HERO
+============================================================ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">VIP In-Person · 40 Seats · Charleston</span>
+        <h1>3 days. 5 hours per day. <span class="accent">15 hours of in-person teaching</span> with the world&rsquo;s #1 manifestation, hypnosis, and intuition experts.</h1>
+        <p class="hero-anchor">Paul McKenna&rsquo;s private trainings start at <strong>$5,000+</strong>. Sonia Choquette&rsquo;s intuition retreats run <strong>$3,000+</strong>. Regan&rsquo;s masterminds are <strong>$10k+</strong> to enter.</p>
+        <p class="hero-kicker">All five teachers. 15 hours. One room. <span class="hero-price">For $2,000.</span></p>
+        <div class="hero-meta">
+          <span>📍 Charleston, North Carolina</span>
+          <span>📅 May 15&ndash;17, 2026</span>
+        </div>
+        <div class="hero-cta-row">
+          <a class="vip-cta vip-cta-mega" href="https://secure.mindvalley.com/v3/flow?charge_plan_id=sp%7C13665&amp;mvh=F73655247840E7496F0F878D5D986F3483429B2317B4490D83377C41EEF207F5">Reserve your seat &mdash; $2,000</a>
+          <span class="hero-cta-note">One payment. 40 seats only.</span>
+        </div>
+      </div>
+      <div class="hero-img">
+        <img src="assets/speakers-vip-hero.png" alt="Sonia Choquette, Vishen Lakhiani, Regan Hillyer, David Ghiyam, and Paul McKenna — speakers at the Manifesting Summit 2026" />
+      </div>
+    </div>
+  </div>
+  <div class="hero-bottom">
+    <span><strong>Paul McKenna</strong> — world&rsquo;s #1 hypnotherapist · <strong>Sonia Choquette</strong> — world&rsquo;s most prominent intuition teacher · <strong>Vishen, Regan &amp; David</strong> — manifestation coaches to millionaires</span>
+  </div>
+</section>
+
+<!-- ============================================================
+3. COMPARISON TABLE
+============================================================ -->
+<section class="tight">
+  <div class="container">
+    <div style="text-align:center;max-width:680px;margin:0 auto 36px">
+      <span class="eyebrow">Choose how you&rsquo;ll experience the summit</span>
+      <h2>Three ways in. One that puts you in the room.</h2>
+    </div>
+
+    <div class="compare-wrap">
+      <table class="compare" aria-label="Compare summit access tiers">
+        <thead>
+          <tr>
+            <th style="text-align:left">&nbsp;</th>
+            <th>
+              Free Summit
+              <span class="price">$0</span>
+              <span class="tier">Virtual</span>
+            </th>
+            <th>
+              VIP Access
+              <span class="price">$49</span>
+              <span class="tier">Virtual upgrade</span>
+            </th>
+            <th class="featured">
+              <span class="badge">Best Value</span><br/>
+              In-Person VIP
+              <span class="price">$2,000</span>
+              <span class="tier">Charleston · 40 seats</span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Live access to all summit sessions</td>
+            <td class="yes">✓</td>
+            <td class="yes">✓</td>
+            <td class="yes featured">✓</td>
+          </tr>
+          <tr>
+            <td>Wealth Recoding Room with Vishen &amp; Regan</td>
+            <td class="no">—</td>
+            <td class="yes">✓</td>
+            <td class="yes featured">✓</td>
+          </tr>
+          <tr>
+            <td>Private 1-on-1 Recode sessions</td>
+            <td class="no">—</td>
+            <td class="yes">✓</td>
+            <td class="yes featured">✓</td>
+          </tr>
+          <tr>
+            <td>VIP Lounge (private Zoom room)</td>
+            <td class="no">—</td>
+            <td class="yes">✓</td>
+            <td class="yes featured">✓</td>
+          </tr>
+          <tr>
+            <td><strong>Live in the studio audience</strong></td>
+            <td class="no">—</td>
+            <td class="no">—</td>
+            <td class="yes featured">✓</td>
+          </tr>
+          <tr>
+            <td><strong>15 hours in person with the teachers</strong></td>
+            <td class="no">—</td>
+            <td class="no">—</td>
+            <td class="yes featured">✓</td>
+          </tr>
+          <tr>
+            <td>Behind-the-scenes access between sessions</td>
+            <td class="no">—</td>
+            <td class="no">—</td>
+            <td class="yes featured">✓</td>
+          </tr>
+          <tr>
+            <td>Studio tour</td>
+            <td class="no">—</td>
+            <td class="no">—</td>
+            <td class="yes featured">✓</td>
+          </tr>
+          <tr>
+            <td>Reception at a historic 1797 home</td>
+            <td class="no">—</td>
+            <td class="no">—</td>
+            <td class="yes featured">✓</td>
+          </tr>
+          <tr>
+            <td>Meal included</td>
+            <td class="no">—</td>
+            <td class="no">—</td>
+            <td class="yes featured">✓</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="text-align:center;margin-top:36px">
+      <a class="vip-cta vip-cta-mega" href="https://secure.mindvalley.com/v3/flow?charge_plan_id=sp%7C13665&amp;mvh=F73655247840E7496F0F878D5D986F3483429B2317B4490D83377C41EEF207F5">Reserve your in-person seat &mdash; $2,000</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+4. THE REFRAME
+============================================================ -->
+<section class="reframe">
+  <div class="container-narrow">
+    <span class="eyebrow">Why this exists</span>
+    <p class="reframe-text">
+      Pictures don&rsquo;t tell the whole story. You can <span class="em">watch</span> the summit on a screen &mdash;
+      or you can be in the studio where it&rsquo;s being made. Behind the scenes between sessions.
+      Inside the room with the teachers, off camera. On a tour through the studio. At a reception in a
+      home built in 1797, with the people teaching you how to manifest.
+      That doesn&rsquo;t translate through a webcam.
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================
+5. THE TEACHERS — IN PERSON
+============================================================ -->
+<section class="teachers">
+  <div class="container">
+    <div style="text-align:center;max-width:760px;margin:0 auto 40px">
+      <span class="eyebrow">The teachers, in the same room as you</span>
+      <h2>What it usually costs to be in a room with these people.</h2>
+      <p class="lede" style="margin:0 auto">Each teacher in this room runs trainings, retreats, and masterminds individually. Their entry points run from $3,000 to $10,000+ per person. This is the only place you get all of them, in person, for $2,000.</p>
+    </div>
+
+    <div class="teachers-anchor">
+      <div class="teachers-anchor-num"><span class="small">$</span>5,000<span class="small">+</span></div>
+      <p>is what you would pay to spend a single day with <strong>any one</strong> of the teachers below in a private setting. In Charleston, you spend <strong>3 days</strong> with all of them &mdash; for less than half of that.</p>
+    </div>
+
+    <div class="teacher-grid">
+      <article class="teacher">
+        <div class="teacher-head">
+          <img src="assets/teachers/vishen.webp" alt="Vishen Lakhiani" class="teacher-photo" />
+          <div>
+            <div class="teacher-name">Vishen Lakhiani</div>
+            <div class="teacher-title">Founder, Mindvalley · NYT bestselling author</div>
+            <span class="teacher-status">Confirmed in person</span>
+          </div>
+        </div>
+        <div class="teacher-body">Founder of the world&rsquo;s largest personal-growth platform. Creator of the <strong>Car Framework</strong> — the diagnostic that locates exactly which manifesting block is keeping you stuck.</div>
+        <div class="teacher-anchor">Private events typically <strong>$5,000+</strong></div>
+      </article>
+
+      <article class="teacher">
+        <div class="teacher-head">
+          <img src="assets/teachers/regan.webp" alt="Regan Hillyer" class="teacher-photo" />
+          <div>
+            <div class="teacher-name">Regan Hillyer</div>
+            <div class="teacher-title">Manifestation coach to 8-figure entrepreneurs</div>
+            <span class="teacher-status">Confirmed in person</span>
+          </div>
+        </div>
+        <div class="teacher-body">Trained over 100,000 students worldwide in identity-level manifesting. Specialises in dissolving the wealth blocks that keep high-achievers under their ceiling.</div>
+        <div class="teacher-anchor">Mastermind entry typically <strong>$10,000+</strong></div>
+      </article>
+
+      <article class="teacher">
+        <div class="teacher-head">
+          <img src="assets/teachers/sonia.webp" alt="Sonia Choquette" class="teacher-photo" />
+          <div>
+            <div class="teacher-name">Sonia Choquette</div>
+            <div class="teacher-title">World&rsquo;s most prominent intuition teacher</div>
+            <span class="teacher-status">Confirmed in person</span>
+          </div>
+        </div>
+        <div class="teacher-body">Six-time NYT bestselling author. Has guided 1M+ students to trust their inner knowing &mdash; the missing layer in every manifesting practice that &ldquo;almost works.&rdquo;</div>
+        <div class="teacher-anchor">In-person retreats typically <strong>$3,000+</strong></div>
+      </article>
+
+      <article class="teacher">
+        <div class="teacher-head">
+          <img src="assets/teachers/paul-mckenna.png" alt="Paul McKenna" class="teacher-photo" />
+          <div>
+            <div class="teacher-name">Paul McKenna</div>
+            <div class="teacher-title">World&rsquo;s #1 hypnotherapist</div>
+            <span class="teacher-status">Confirmed in person</span>
+          </div>
+        </div>
+        <div class="teacher-body">Has personally hypnotised everyone from royalty to rock stars. The fastest path past intellectual resistance and into the subconscious where wealth actually gets installed.</div>
+        <div class="teacher-anchor">Private sessions typically <strong>$5,000+</strong></div>
+      </article>
+
+      <article class="teacher">
+        <div class="teacher-head">
+          <img src="assets/teachers/david-ghiyam.webp" alt="David Ghiyam" class="teacher-photo" />
+          <div>
+            <div class="teacher-name">David Ghiyam</div>
+            <div class="teacher-title">Kabbalist · spiritual entrepreneur</div>
+            <span class="teacher-status">Confirmed in person</span>
+          </div>
+        </div>
+        <div class="teacher-body">Co-founder of MaryRuth Organics ($300M+). Brings ancient Kabbalistic wisdom on wealth as a spiritual responsibility &mdash; not a goal.</div>
+        <div class="teacher-anchor">Private workshops typically <strong>$2,500+</strong></div>
+      </article>
+
+      <article class="teacher">
+        <div class="teacher-head" style="height:72px;align-items:center;justify-content:center;background:var(--mv-grey-100);border-radius:50px;padding:0 18px">
+          <div style="text-align:center;width:100%">
+            <div class="teacher-name">+ More world-leading teachers</div>
+            <div class="teacher-title">Additional speakers being announced</div>
+          </div>
+        </div>
+        <div class="teacher-body">The full speaker list is still being confirmed. Every teacher in the room has a global reputation and a private price tag &mdash; all included in your seat.</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+6. WHAT'S INSIDE THE ROOM
+============================================================ -->
+<section class="inclusions">
+  <div class="container">
+    <div style="text-align:center;max-width:680px;margin:0 auto 56px">
+      <span class="eyebrow">What&rsquo;s inside the room</span>
+      <h2>Six things that don&rsquo;t happen on Zoom.</h2>
+    </div>
+
+    <div class="inclusion-grid">
+      <div class="inclusion">
+        <span class="inclusion-num">1</span>
+        <h3>Live in the studio audience</h3>
+        <p>All 3 days of the summit, broadcast live from the Charleston studio. You&rsquo;re not watching the production &mdash; you&rsquo;re in it.</p>
+      </div>
+      <div class="inclusion">
+        <span class="inclusion-num">2</span>
+        <h3>Behind-the-scenes between sessions</h3>
+        <p>The conversations that happen off-camera, in the green room, between takes. The unscripted moments most people never get to see.</p>
+      </div>
+      <div class="inclusion">
+        <span class="inclusion-num">3</span>
+        <h3>Private studio tour</h3>
+        <p>Walk the production floor. See where every Mindvalley masterclass you&rsquo;ve ever taken was filmed. A peek inside the engine.</p>
+      </div>
+      <div class="inclusion">
+        <span class="inclusion-num">4</span>
+        <h3>Reception at a historic home</h3>
+        <p>An evening reception in a Charleston home built in 1797. Long-table dinner energy with the teachers, the producers, and the 39 others in the room.</p>
+      </div>
+      <div class="inclusion">
+        <span class="inclusion-num">5</span>
+        <h3>Meal included</h3>
+        <p>Lunch is on us, every day. So you&rsquo;re not running between sessions wondering where to eat &mdash; you&rsquo;re still in the room when the next breakthrough happens.</p>
+      </div>
+      <div class="inclusion">
+        <span class="inclusion-num">6</span>
+        <h3>39 fellow manifestors</h3>
+        <p>The 40 people who said yes to this are not casual buyers. Three days in a small room with them is, on its own, worth the seat.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+7. SOCIAL PROOF — 2025 IN-PERSON ATTENDEES
+============================================================ -->
+<section class="proof">
+  <div class="container">
+    <div style="text-align:center;max-width:680px;margin:0 auto 48px">
+      <span class="eyebrow">From last year&rsquo;s in-person attendees</span>
+      <h2>What the room actually does to you.</h2>
+    </div>
+
+    <div class="proof-grid">
+      <div class="proof-card">
+        <div class="proof-photo" aria-hidden="true">G</div>
+        <div>
+          <p class="proof-quote">&ldquo;Being there physically and feeling the energy was incredible &mdash; nothing I have felt before. I heard what I needed to hear, and my soul&rsquo;s journey is so much clearer.&rdquo;</p>
+          <div class="proof-name">Geraldine Aguilar</div>
+          <div class="proof-meta">Business Owner · Tijuana, Mexico</div>
+        </div>
+      </div>
+
+      <div class="proof-card">
+        <div class="proof-photo" aria-hidden="true">L</div>
+        <div>
+          <p class="proof-quote">&ldquo;One of the speakers said something that struck my brain like lightning: &lsquo;Do it anyway.&rsquo; Attending this event was the best decision I could have made.&rdquo;</p>
+          <div class="proof-name">Layla Evans</div>
+          <div class="proof-meta">Career Coach · St. Louis, United States</div>
+        </div>
+      </div>
+
+      <div class="proof-card">
+        <div class="proof-photo" aria-hidden="true">R</div>
+        <div>
+          <p class="proof-quote">&ldquo;I manifested meeting Regan in person. When I saw the event was coming, there was no doubt about it. Meeting her was absolutely magical.&rdquo;</p>
+          <div class="proof-name">Rita Calenco</div>
+          <div class="proof-meta">California, United States</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+8. LOGISTICS
+============================================================ -->
+<section class="logistics">
+  <div class="container-narrow">
+    <div style="text-align:center;margin-bottom:36px">
+      <span class="eyebrow">The details</span>
+      <h2>The practical stuff.</h2>
+    </div>
+
+    <div class="logistics-card">
+      <div class="logistics-row">
+        <span class="label">Where</span>
+        <span class="value">Charleston, North Carolina</span>
+        <span class="sub">Studio venue · exact address shared with confirmed attendees</span>
+      </div>
+      <div class="logistics-row">
+        <span class="label">When</span>
+        <span class="value">May 15&ndash;17, 2026</span>
+        <span class="sub">3 days · ~5 hours per day · 15 hours of in-person teaching</span>
+      </div>
+      <div class="logistics-row">
+        <span class="label">Included</span>
+        <span class="value">Studio access · 1 meal/day · reception · studio tour</span>
+        <span class="sub">Everything that happens once you walk in the door</span>
+      </div>
+      <div class="logistics-row">
+        <span class="label">Not included</span>
+        <span class="value">Travel &amp; lodging</span>
+        <span class="sub">You arrange your own flights and hotel</span>
+      </div>
+      <div class="logistics-note">Plus everything in the $49 Virtual VIP Access tier &mdash; the Wealth Recoding Room with Vishen &amp; Regan, your private 1-on-1 Recode sessions, and the VIP Lounge.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+9. VALUE FRAME
+============================================================ -->
+<section class="value-frame">
+  <div class="container-narrow" style="text-align:center">
+    <span class="eyebrow" style="color:var(--mv-yellow)">Do the math</span>
+    <h2>What this room actually costs to assemble.</h2>
+    <p style="max-width:600px;margin:0 auto;color:rgba(255,255,255,0.8);font-size:17px">If you tried to access these teachers individually, in their own private settings, you&rsquo;d spend more than this on a single one of them. Here&rsquo;s the floor for each:</p>
+
+    <ul class="value-list">
+      <li><span class="who">Paul McKenna · private session</span><span class="amount">$5,000+</span></li>
+      <li><span class="who">Sonia Choquette · in-person retreat</span><span class="amount">$3,000+</span></li>
+      <li><span class="who">Regan Hillyer · mastermind entry</span><span class="amount">$10,000+</span></li>
+      <li><span class="who">Vishen Lakhiani · private event</span><span class="amount">$5,000+</span></li>
+      <li><span class="who">David Ghiyam · private workshop</span><span class="amount">$2,500+</span></li>
+      <li><span class="who">+ studio production, meals, reception, gala home</span><span class="amount">priceless</span></li>
+    </ul>
+
+    <div class="value-total">
+      <div class="strike">Equivalent value: $25,000+</div>
+      <span class="now">$2,000</span>
+      <p>One payment. 40 seats. Charleston, May 15&ndash;17.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+10. FINAL CTA — ORDER MENU
+============================================================ -->
+<section class="order">
+  <div class="container">
+    <div class="order-card">
+      <div class="order-left">
+        <h2>Step Into The Room</h2>
+        <ul class="order-features">
+          <li>3 days live in the studio audience &mdash; Charleston, May 15&ndash;17</li>
+          <li>15 hours in person with the world&rsquo;s top manifestation teachers</li>
+          <li>Behind-the-scenes access · private studio tour</li>
+          <li>Reception at a historic 1797 home · meals included</li>
+          <li>Plus everything in the $49 Virtual VIP Access tier</li>
+        </ul>
+      </div>
+      <div class="order-right">
+        <div class="order-price-card">
+          <div class="order-price-head">In-Person VIP · 40 Seats</div>
+          <div class="order-price-body">
+            <div class="price-row">
+              <span class="strike">$25,000+</span>
+              <span class="now">$2,000</span>
+            </div>
+            <p class="note">Only available on this page. Closes when the 40 seats are filled.</p>
+            <div class="order-payments" aria-label="Payment methods accepted">
+              <span style="font-size:11px;color:var(--mv-text-muted);font-weight:600">VISA · MC · AMEX · DISCOVER · PAYPAL</span>
+            </div>
+            <p class="order-vat">VAT may apply based on your billing address. All orders processed securely.</p>
+          </div>
+        </div>
+        <a class="vip-cta vip-cta-block vip-cta-mega" href="https://secure.mindvalley.com/v3/flow?charge_plan_id=sp%7C13665&amp;mvh=F73655247840E7496F0F878D5D986F3483429B2317B4490D83377C41EEF207F5">Reserve your seat &mdash; $2,000</a>
+      </div>
+    </div>
+
+    <div class="order-skip">
+      <a href="#">No thanks, skip this upgrade</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+FOOTER
+============================================================ -->
+<footer class="footer">
+  <div class="container">
+    <div>© 2026 Mindvalley · <a href="mailto:support@mindvalley.com">support@mindvalley.com</a> · <a href="#">Terms</a> · <a href="#">Privacy</a> · <a href="#">Refund Policy</a></div>
+  </div>
+</footer>
+
+<script>
+  // Light countdown logic — counts down from 15 minutes for demo.
+  // Replace `endsAt` with the real upgrade-window deadline.
+  (function(){
+    var endsAt = Date.now() + 15*60*1000;
+    var el = document.getElementById('countdown');
+    if(!el) return;
+    function pad(n){return n<10?'0'+n:''+n}
+    function tick(){
+      var s = Math.max(0, Math.floor((endsAt - Date.now())/1000));
+      var d = Math.floor(s/86400); s -= d*86400;
+      var h = Math.floor(s/3600);  s -= h*3600;
+      var m = Math.floor(s/60);    s -= m*60;
+      el.innerHTML =
+        '<span class="countdown-unit">'+pad(d)+'<span class="countdown-unit-label">D</span></span>'+
+        '<span class="countdown-unit">'+pad(h)+'<span class="countdown-unit-label">H</span></span>'+
+        '<span class="countdown-unit">'+pad(m)+'<span class="countdown-unit-label">M</span></span>'+
+        '<span class="countdown-unit">'+pad(s)+'<span class="countdown-unit-label">S</span></span>';
+    }
+    tick(); setInterval(tick, 1000);
+  })();
+</script>
+
+</body>
+</html>
