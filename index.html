@@ -155,13 +155,19 @@ p.lede{font-size:19px;color:var(--mv-text-muted);max-width:680px}
 
 /* === Social proof === */
 .proof{background:#fff}
+.proof-source{text-align:center;font-size:14px;color:var(--mv-text-muted);margin:0 auto 40px;max-width:580px}
+.proof-source a{color:var(--mv-brand);text-decoration:underline}
 .proof-grid{display:grid;grid-template-columns:1fr;gap:20px}
-@media(min-width:760px){.proof-grid{grid-template-columns:repeat(3,1fr)}}
-.proof-card{background:#fff;border:1px solid var(--mv-grey-250);border-radius:14px;padding:24px;display:flex;gap:18px;align-items:flex-start}
-.proof-photo{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,var(--mv-brand-bright),var(--mv-brand));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:22px;flex-shrink:0}
-.proof-quote{font-size:15px;color:var(--mv-text);line-height:1.5;margin:0 0 10px}
-.proof-name{font-weight:700;font-size:14px}
-.proof-meta{font-size:12px;color:var(--mv-text-muted)}
+@media(min-width:760px){.proof-grid{grid-template-columns:repeat(2,1fr)}}
+.proof-card{background:#fff;border:1px solid var(--mv-grey-250);border-radius:14px;padding:26px;display:flex;flex-direction:column}
+.proof-head{display:flex;gap:14px;align-items:center}
+.proof-photo{width:48px;height:48px;border-radius:50%;flex-shrink:0;object-fit:cover;background:var(--mv-grey-150)}
+.proof-photo--initial{background:linear-gradient(135deg,var(--mv-brand-bright),var(--mv-brand));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:20px}
+.proof-meta-block{flex:1;min-width:0}
+.proof-name{font-weight:700;font-size:15px;color:var(--mv-text);line-height:1.25}
+.proof-meta{font-size:13px;color:var(--mv-text-muted);margin-top:2px}
+.proof-tag{display:inline-block;background:var(--mv-brand-light);color:var(--mv-brand);padding:7px 12px;border-radius:6px;font-size:11px;font-weight:800;letter-spacing:0.04em;text-transform:uppercase;margin:20px 0 14px;line-height:1.35;align-self:flex-start;max-width:100%}
+.proof-quote{font-size:15px;color:var(--mv-text);line-height:1.6;margin:0;font-style:italic}
 
 /* === Logistics card === */
 .logistics{background:linear-gradient(135deg,#f8efff 0%,#fff 100%)}
@@ -542,38 +548,96 @@ p.lede{font-size:19px;color:var(--mv-text-muted);max-width:680px}
 ============================================================ -->
 <section class="proof">
   <div class="container">
-    <div style="text-align:center;max-width:680px;margin:0 auto 48px">
-      <span class="eyebrow">From last year&rsquo;s in-person attendees</span>
-      <h2>What the room actually does to you.</h2>
+    <div style="text-align:center;max-width:680px;margin:0 auto 16px">
+      <span class="eyebrow">Verified summit alumni</span>
+      <h2>What happens to the people who show up.</h2>
     </div>
+    <p class="proof-source">Verified stories from <a href="https://stories.mindvalley.com" target="_blank" rel="noopener">stories.mindvalley.com</a> &mdash; students of the same teachers running this VIP room.</p>
 
     <div class="proof-grid">
-      <div class="proof-card">
-        <div class="proof-photo" aria-hidden="true">G</div>
-        <div>
-          <p class="proof-quote">&ldquo;Being there physically and feeling the energy was incredible &mdash; nothing I have felt before. I heard what I needed to hear, and my soul&rsquo;s journey is so much clearer.&rdquo;</p>
-          <div class="proof-name">Geraldine Aguilar</div>
-          <div class="proof-meta">Business Owner · Tijuana, Mexico</div>
+      <article class="proof-card">
+        <div class="proof-head">
+          <div class="proof-photo proof-photo--initial">G</div>
+          <div class="proof-meta-block">
+            <div class="proof-name">Geraldine Aguilar</div>
+            <div class="proof-meta">Business Owner · Tijuana, Mexico</div>
+          </div>
         </div>
-      </div>
+        <span class="proof-tag">Felt the energy in person</span>
+        <p class="proof-quote">&ldquo;Being there physically and feeling the energy was incredible &mdash; nothing I have felt before. I heard what I needed to hear, and my soul&rsquo;s journey is so much clearer.&rdquo;</p>
+      </article>
 
-      <div class="proof-card">
-        <div class="proof-photo" aria-hidden="true">L</div>
-        <div>
-          <p class="proof-quote">&ldquo;One of the speakers said something that struck my brain like lightning: &lsquo;Do it anyway.&rsquo; Attending this event was the best decision I could have made.&rdquo;</p>
-          <div class="proof-name">Layla Evans</div>
-          <div class="proof-meta">Career Coach · St. Louis, United States</div>
+      <article class="proof-card">
+        <div class="proof-head">
+          <div class="proof-photo proof-photo--initial">L</div>
+          <div class="proof-meta-block">
+            <div class="proof-name">Layla Evans</div>
+            <div class="proof-meta">Career Coach · St. Louis, United States</div>
+          </div>
         </div>
-      </div>
+        <span class="proof-tag">Drove 27 hours to be there live</span>
+        <p class="proof-quote">&ldquo;One of the speakers said something that struck my brain like lightning: &lsquo;Do it anyway.&rsquo; Attending this event was the best decision I could have made.&rdquo;</p>
+      </article>
 
-      <div class="proof-card">
-        <div class="proof-photo" aria-hidden="true">R</div>
-        <div>
-          <p class="proof-quote">&ldquo;I manifested meeting Regan in person. When I saw the event was coming, there was no doubt about it. Meeting her was absolutely magical.&rdquo;</p>
-          <div class="proof-name">Rita Calenco</div>
-          <div class="proof-meta">California, United States</div>
+      <article class="proof-card">
+        <div class="proof-head">
+          <div class="proof-photo proof-photo--initial">R</div>
+          <div class="proof-meta-block">
+            <div class="proof-name">Rita Calenco</div>
+            <div class="proof-meta">California, United States</div>
+          </div>
         </div>
-      </div>
+        <span class="proof-tag">Manifested meeting Regan in person</span>
+        <p class="proof-quote">&ldquo;I manifested meeting Regan in person. When I saw the event was coming, there was no doubt about it. Meeting her was absolutely magical.&rdquo;</p>
+      </article>
+
+      <article class="proof-card">
+        <div class="proof-head">
+          <div class="proof-photo proof-photo--initial">J</div>
+          <div class="proof-meta-block">
+            <div class="proof-name">Jennifer Greenhut</div>
+            <div class="proof-meta">Founder · Los Angeles, United States</div>
+          </div>
+        </div>
+        <span class="proof-tag">Investment for startup + nonprofit donation</span>
+        <p class="proof-quote">&ldquo;After the Summit, I got an investment for my startup and a major donation for my nonprofit. I stopped chasing. I started receiving.&rdquo;</p>
+      </article>
+
+      <article class="proof-card">
+        <div class="proof-head">
+          <div class="proof-photo proof-photo--initial">B</div>
+          <div class="proof-meta-block">
+            <div class="proof-name">Benjamaporn Kluaypa</div>
+            <div class="proof-meta">Hypnotherapist · Bangkok, Thailand</div>
+          </div>
+        </div>
+        <span class="proof-tag">Quit 10-year job to build a spiritual business</span>
+        <p class="proof-quote">&ldquo;I quit my 10-year job to build a spiritual business from nothing. This Summit unlocked the money beliefs that were quietly killing it.&rdquo;</p>
+      </article>
+
+      <article class="proof-card">
+        <div class="proof-head">
+          <div class="proof-photo proof-photo--initial">A</div>
+          <div class="proof-meta-block">
+            <div class="proof-name">Audrey Kohli</div>
+            <div class="proof-meta">Entrepreneur · Bournemouth, United Kingdom</div>
+          </div>
+        </div>
+        <span class="proof-tag">Thousands in revenue · live at the summit</span>
+        <p class="proof-quote">&ldquo;I created a few thousand in revenue in an unexpected way while being at the Summit.&rdquo;</p>
+      </article>
+
+      <article class="proof-card">
+        <div class="proof-head">
+          <div class="proof-photo proof-photo--initial">K</div>
+          <div class="proof-meta-block">
+            <div class="proof-name">Kermie Lopez</div>
+            <div class="proof-meta">Life &amp; Executive Coach · Martinez, United States</div>
+          </div>
+        </div>
+        <span class="proof-tag">New initiatives + Best Buy executive in network</span>
+        <p class="proof-quote">&ldquo;The Summit rewired who I am and my business followed. New clients, new initiatives, a Best Buy executive in my network.&rdquo;</p>
+      </article>
     </div>
   </div>
 </section>
